@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char str[100],str1[100];
+	int i,j,temp;
+	scanf("%[^
+]s",str);
+	strcpy(str1,str);
+	for(i=0;str[i]!=NULL;i++);
+	int len=i;
+	i=0;
+	j=len-1;
+	while(i<j)
+	{
+		temp=str[i];
+		str[i]=str[j];
+		str[j]=temp;
+		i++;
+		j--;
+   }
+   if(strcmp(str1,str)==0)
+   {
+   		printf("Palindrome");
+   }
+   else
+   {
+   		printf("Not Palindrome");
+   }
+}
